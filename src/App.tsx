@@ -1,4 +1,5 @@
 import searchImg from '../public/Vector (2).png'
+import RightContainer from './components/RightContainer'
 
 function App( ) {
 
