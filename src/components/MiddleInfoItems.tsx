@@ -1,6 +1,6 @@
 type Props = {
     title: string,
-    degrees: string,
+    degrees: string | number,
     imageUrl: string
 
 }
