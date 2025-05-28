@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const myAPI = '9301fa1d112843ef881111538251104';
-const baseUrl = 'http://api.weatherapi.com/v1';
+const baseUrl = 'https://api.weatherapi.com/v1';
 
 
 export const useGetWeatherData = () => {
