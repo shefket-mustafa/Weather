@@ -36,6 +36,10 @@ npm install
 npm run dev
 ```
 
+## 📦 Live Demo
+
+🔗 [Check out the live app here](https://weather-619c.vercel.app)
+
 ## 🔮 Features
 
 - ⛅ Real-time weather forecast
