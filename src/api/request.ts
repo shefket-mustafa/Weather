@@ -8,11 +8,15 @@ export const useGetWeatherData = () => {
 
     const getWeatherData = async (city:string) => {
         const response = await axios.get(baseUrl+`/forecast.json?key=${myAPI}&q=${city}`)
+        console.log(response.data);
+        
         console.log(response.data.current.cloud);
         console.log(response.data.forecast.forecastday[0]);
+        console.log(response.data.current);
         
         return {forecast:response.data.forecast.forecastday[0],
-            current:response.data.current
+            current:response.data.current,
+            location:response.data.location
         }
     }
 

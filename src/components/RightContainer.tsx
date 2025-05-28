@@ -5,10 +5,12 @@ import { useGetWeatherData } from "../api/request";
 
 
 type Props = {
-  image: string
+  image: string,
+  handler: (data:any) => void
+
 };
 
-export default function RightContainer({image}:Props) {
+export default function RightContainer({image, handler}:Props) {
 
   const [cityInput, setCityInput] = useState('Sofia');
   const [city, setCity] = useState<any>({})
@@ -17,13 +19,19 @@ export default function RightContainer({image}:Props) {
 
   useEffect(() => {
     getWeatherData('Sofia')
-    .then(setCity)
+    .then(data => {
+      setCity(data);
+      
+    })
   },[]);
 
   useEffect(() => {
     if(cityInput.trim()){
       getWeatherData(cityInput)
-      .then(setCity)
+      .then(data => {
+        setCity(data);
+        handler(data)
+      })
     }
   },[searchClicked])
     
@@ -46,7 +54,7 @@ export default function RightContainer({image}:Props) {
 
     <MiddleInfo city={city} />
 
-    <TodaysForecast />
+    <TodaysForecast data={city}/>
 
   
   </div>;
