@@ -1,8 +1,21 @@
 import TodaysForecastItems from "./TodaysForecastItems";
 
 type Props = {
-    data: any
-}
+    data: {
+      forecast: {
+        hour: HourlyForecast[];
+      };
+    };
+  };
+
+type HourlyForecast = {
+    time: string;
+    temp_c: number;
+    condition: {
+      text: string;
+      icon: string;
+    };
+  };
 
 export default function TodaysForecast({data}:Props){
     
@@ -12,7 +25,7 @@ export default function TodaysForecast({data}:Props){
         
         
         <ul>
-        {data?.forecast?.hour?.map(day => <li key={day.time}> <TodaysForecastItems data={day}/></li>)}
+        {data?.forecast?.hour?.map((day: HourlyForecast) => <li key={day.time}> <TodaysForecastItems data={day}/></li>)}
         </ul>
     </div>
 }
