@@ -24,7 +24,7 @@ const fullDate = `${time} - ${weekday}, ${date} ${month} '${year}`;
 
   
   
-    return <div className='flex  pt-180 pl-20 items-center'>
+    return <div className='flex pt-140 pl-20 items-center'>
 
     <div className='flex'>
     <p className='text-white text-[160px]'>{data.current?.temp_c?.toFixed(0)}</p>
