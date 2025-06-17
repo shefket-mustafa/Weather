@@ -35,7 +35,7 @@ export default function RightContainer({image, handler}:Props) {
     }
   },[searchClicked])
     
-    return <div className="absolute top-0 right-0 h h-full min-w-[526px] backdrop-blur overflow-y-auto">
+    return <div className="w-full lg:w-[400px] lg:pr-12 absolute top-0 right-0 h h-full  backdrop-blur-md overflow-y-auto px-4">
 
     <div className="flex justify-between pb-1  mt-10 max-h-[400px] max-w-[371px] ml-5 text-white border-b">
 

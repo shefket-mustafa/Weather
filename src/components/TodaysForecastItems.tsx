@@ -5,7 +5,7 @@ type Props ={
 export default function TodaysForecastItems({ data }:Props) {
 
     // const time = data?.hour?.split(" ");
-    console.log();
+    
     
 
     return <div className="text-white flex justify-between items-center pt-10">

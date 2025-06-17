@@ -9,6 +9,7 @@ function App( ) {
   const [middleDataCityInput, setMiddleDataCityInput] = useState<any>({});
 
   const middleDataHandler = (data:any) => {
+    
     setMiddleDataCityInput(data);
   };
 
@@ -17,7 +18,10 @@ function App( ) {
 <Logo />
 {/* right scrollable comp */}
 <div className='flex flex-col lg:flex-row'>
+
+  <div className='hidden lg:block'>
 <MiddleDetails data={middleDataCityInput}/>
+</div>
 
 <RightContainer handler={middleDataHandler} image='/Vector (2).png' />
 </div>

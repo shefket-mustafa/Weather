@@ -1,5 +1,7 @@
 import { createContext, useContext } from "react";
 
+
+
 type ContextType = {
     city: string,
     setCity: (city: string) => void;
